@@ -23,3 +23,21 @@ eg: app/assets/javascripts/application.js
 
 -Manifest files configured in Rails will automatically concatenate the files listed into one file
 -Rails will actually serve each file separately when running in development mode
+
+
+PROCESSING
+-Load assets through Rails helps pre-process the files using popular languages like SCSS for better CSS and
+ Coffescript for cleaner JS
+-Providing correct file with extension of .scss so the asset pipeline knows to run through the pre-processor
+
+
+FINGERPRINTING
+-Caching: keeping a copy of a time-consuming operation locally as to know redo expensive operation again if
+ in/out puts are exactly rhe same
+-Caches usually Key/Value stores
+-Saves bandwidths and provides speed booster
+
+-Fingerprinting: technique that makes a name of a filename dependent on the contents of the file
+-While file contents change, so does the filename providing easy way of telling whether 2 versions of a file
+ are identical even across different servers/deployments
+-Enabled by default for production and disabled for all other environments
