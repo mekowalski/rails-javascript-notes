@@ -1,0 +1,8 @@
+Asset pipeline is Rails answer to managing stylesheets, JS and images
+
+ASSET PATHS
+-Asset pipeline provides answers to problems or creating, organizing and location of files
+-Two problems arise with separate folders and files
+  1. How does Rails know where things are
+  2. Serving each file separately loads a page slowly and adding files together to load 1 JS and 1 CSS file
+     (concatenation), isn't ideal
