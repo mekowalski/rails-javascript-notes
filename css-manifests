@@ -1,0 +1,9 @@
+Asset Pipeline(AP) can help manage chaos of stylesheets with JS
+
+MANIFEST FILES
+-CSS manifest has special syntax that differentiates it from a regular CSS file
+*= require directive simialar to JS counterpart but just using CSS comment instead of JS comment
+eg:
+  /*
+  *= require main
+  */
