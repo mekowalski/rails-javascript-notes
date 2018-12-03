@@ -28,5 +28,21 @@ eg:
   /*
   *= require main => <link rel="stylesheet" href="/assets/main.css" />
   *= require beers => <link rel="stylesheet" href="/assets/beers.css" />
-  *= require companies => <link rel="stylesheet" href="/assets/companies.css" /> 
+  *= require companies => <link rel="stylesheet" href="/assets/companies.css" />
   */
+
+
+MANIFESTS IN PRODUCTION
+-Sprockets tale care of all CSS files creating one large CSS file
+-Also minify the contents, removing unneeded whitespace to reduce overall size
+-Both of these things will speed up page loads
+eg:
+  /*
+  *= require main
+  *= require beers
+  *= require companies
+  */
+  => <link rel="stylesheet" href="/assets/application-4dd5b109ee3439da54f5bdfd78a80473.css" />
+
+*the minified version provides no whitespace but becomes hard to read therefore development mode is used with
+ inidividual, unminified files instead*
