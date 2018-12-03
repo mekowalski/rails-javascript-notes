@@ -1,0 +1,9 @@
+Page-specific JS files help organize JS into different files based on functionality
+(ALWAYS SEPARATION OF CONCERNS)
+
+PAGE SPECIFIC JS IN MANIFEST
+-Rails Generators creates a new resource and page-specific JS and CSS files
+-This is where any JS should be put to the pages associated with the resource
+eg: Beer resource
+    app/assets/javascripts/application.js
+    //= require beers (although mine has require_tree for all the resources of the app)
