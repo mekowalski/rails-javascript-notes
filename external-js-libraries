@@ -1,0 +1,5 @@
+EXTERNAL JAVASCRIPT
+-Not all JS files will be loaded from application directories
+-Sometimes loading may occur from a CDN that allows saving bandwidth and help with file download speeds
+eg:
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" />
