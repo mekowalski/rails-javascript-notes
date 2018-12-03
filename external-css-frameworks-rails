@@ -1,0 +1,3 @@
+EXTERNAL STYLESHEETS
+-Previously loaded CSS from asset directories, which isn't required
+-Another way to load CSS is use of standard HTML <style> tags placed in <head> tag of application layout

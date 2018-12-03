@@ -45,4 +45,4 @@ eg:
   => <link rel="stylesheet" href="/assets/application-4dd5b109ee3439da54f5bdfd78a80473.css" />
 
 *the minified version provides no whitespace but becomes hard to read therefore development mode is used with
- inidividual, unminified files instead*
+ individual, unminified files instead*
