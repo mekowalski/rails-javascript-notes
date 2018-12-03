@@ -17,3 +17,19 @@ eg:
 
 -Instead load file based of the controller's name
 -But no longer getting benefits of asset concatenation or caching
+
+
+USING CONTENT_FOR
+-Final way to include page-specific JS is CONTENT_FOR :JS block in layout
+eg:
+  1. app/views/layouts/application.html.erb
+  <head>
+    <meta>
+    <%= javascript_include_tag 'application' %>
+    <%= yield.js %>
+  2. app/views/beers/show.html.erb
+  <% content_for :js do %>
+    <script>
+      alert('some page-specific JS')
+    </script>
+  <% end %>
