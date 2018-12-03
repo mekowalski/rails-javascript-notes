@@ -5,3 +5,20 @@ PREPROCESSORS
 -Development: AP will run preprocessor on any file that needs to be processed every time it's requested(which
  is too slow)
 -Running rake asste:precompile  which allows webservers to serve static CSS/JS without ever touching Rails
+
+
+COFFEESCRIPT
+-Coffeescript simplifies JS by abstraction
+-What is left is very Ruby-like syntax
+eg:
+  launch() if ignition is on
+
+  volume = 10 if band isnt SpinalTap
+
+  letTheWildRumpusBegin() unless answer is no
+
+  if car.speed < limit then accelerate()
+
+  winner = yes if pick in [47, 92, 13]
+
+  print inspect "My name is #{@name}"
