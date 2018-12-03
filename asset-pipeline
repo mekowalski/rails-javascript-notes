@@ -14,3 +14,12 @@ ONE: Asset Pipeline has concept called Asset Paths for handling where to look
   eg: Rails.application.config.assets.paths << 'New Path'
 
 TWO: Manifests and Concatenation
+-As files can be put anywhere, Asset Pipeline uses a manifest file to tell Rails what to load
+-Central file where CSS and JS files can be listed for application needs
+eg: app/assets/javascripts/application.js
+    //= require jquery
+    //= require calendar(if that's your app)
+    *Asset Pipeline will search all configured paths for a file with the name provided L21*
+
+-Manifest files configured in Rails will automatically concatenate the files listed into one file
+-Rails will actually serve each file separately when running in development mode
