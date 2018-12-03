@@ -1,0 +1,3 @@
+Manifest files have special characteristics that differentiate them from plain old JS files
+eg: many manifests files have LOC's that begin with //=
+    //= is a directive and tells sprockets that isn't normal JS comment
