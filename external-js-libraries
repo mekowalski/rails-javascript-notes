@@ -3,3 +3,14 @@ EXTERNAL JAVASCRIPT
 -Sometimes loading may occur from a CDN that allows saving bandwidth and help with file download speeds
 eg:
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" />
+
+
+VENDOR ASSETS
+-With growth of application, build up of JS libraries will be present along the way
+-At some point external files will probably be integrated to be internal JS files
+-^^With that being said, also don't want to clutter assets/javascripts folder with code written/maintained
+ by others
+-Rails provides vendor/assets/javascripts to place 3rd party JS libraries and add them to manifest file
+-A user may already have that popular library downloaded therefore forcing another downloading
+*Vendor assets are to be thought of thoroughly, i've never considered 3rd party JS libraries that i can
+ recall*
