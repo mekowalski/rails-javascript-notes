@@ -7,3 +7,26 @@ eg:
   /*
   *= require main
   */
+
+
+REQUIRE DIRECTIVES
+-If it is located in one of the configured folders, when requiring a CSS asset, it will be included in app
+-When requiring, the path must be asset path
+eg:
+  app/assets/stylesheets.blogs/main.css
+  *= require 'blogs/main'
+
+
+LOADING MANIFEST FILE IN LAYOUT
+-Including manifest file in layout with use of: style_link_tag in application layout file
+-Sprocket takes care of loading manifest and determining which assets to include
+eg:
+  <%= stylesheet_link_tag 'application' %>
+
+-Development: each CSS file will get its own link tag for easier debugging
+eg:
+  /*
+  *= require main => <link rel="stylesheet" href="/assets/main.css" />
+  *= require beers => <link rel="stylesheet" href="/assets/beers.css" />
+  *= require companies => <link rel="stylesheet" href="/assets/companies.css" /> 
+  */
