@@ -1,3 +1,19 @@
 Manifest files have special characteristics that differentiate them from plain old JS files
 eg: many manifests files have LOC's that begin with //=
     //= is a directive and tells sprockets that isn't normal JS comment
+
+
+REQUIRE DIRECTIVES
+-require: directive that tells sprockets that the file specified should be loaded
+-don't have to put file extension
+eg: if file is main.js they type
+    //= require main
+
+eg: require_tree tells sprockets to load all files in the given folder
+    //= require_tree (will include all JS files in the same folder that application.js is located)
+    *this may not be considered due to slow loading of all JS content that doesn't necessarily need to be
+     loaded*
+
+-When requiring something in manifest file, provide the asset path
+eg: comment.js in the folder /assets/javascripts/blog
+    //= require blog/comments
