@@ -17,3 +17,20 @@ eg: require_tree tells sprockets to load all files in the given folder
 -When requiring something in manifest file, provide the asset path
 eg: comment.js in the folder /assets/javascripts/blog
     //= require blog/comments
+
+
+LOADING MANIFEST IN LAYOUT
+-To include manifest file in application use: javascript_include_tag in application layout file
+eg:
+  app/views/layouts/application.html.erb
+  <%= javascript_include_tag 'application'%>
+
+-Sprockets will take care of loading manifest file and determine which assets to load
+  -Development: each asset loaded individually
+  eg:
+  <script src="assets/jquery.min.js" />
+  <script src="assets/bootstrap.min.js" />
+  <script src="assets/blogs.js" />
+  -Production: all assets will be combined
+  eg:
+  <script src="/assets/application-908e25f4bf641868d8683022a5b62f54.js" />
