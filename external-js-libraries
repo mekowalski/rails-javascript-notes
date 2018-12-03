@@ -14,3 +14,13 @@ VENDOR ASSETS
 -A user may already have that popular library downloaded therefore forcing another downloading
 *Vendor assets are to be thought of thoroughly, i've never considered 3rd party JS libraries that i can
  recall*
+
+
+GEMS
+-Many popular JS libraries have gems
+-Gems package JS files and when installed, add them to asset path allowing require of JS inside manifest file
+eg:
+  -Install jQuery gem in Gemfile
+  -bundle install and able to add //=require jquery to manifest
+  -jQuery will now be loaded by Rails
+-
