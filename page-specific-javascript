@@ -7,3 +7,13 @@ PAGE SPECIFIC JS IN MANIFEST
 eg: Beer resource
     app/assets/javascripts/application.js
     //= require beers (although mine has require_tree for all the resources of the app)
+
+
+CONTROLLER SPECIFIC JS
+-To prevent massive amounts of files to run in a large application, allow for pages to load only when in use
+ of the name of the controller
+eg:
+  <%= javascript_include_tag params[:controller] %>
+
+-Instead load file based of the controller's name
+-But no longer getting benefits of asset concatenation or caching
