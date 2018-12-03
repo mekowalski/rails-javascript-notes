@@ -1,9 +1,9 @@
 PREPROCESSORS
 -Because AP parses all asset files, CSS and JS may be written in a language that isn't exactly CSS or JS
--AP recognizes the files aren't normal CSS/JS therefore runs it through a preprocessor which compiles to valid
- CSS/JS
--Development: AP will run preprocessor on any file that needs to be processed every time it's requested(which
- is too slow)
+-AP recognizes the files aren't normal CSS/JS therefore runs it through a preprocessor which compiles to
+ valid CSS/JS
+-Development: AP will run preprocessor on any file that needs to be processed every time it's requested
+ (which is too slow)
 -Running rake asste:precompile  which allows webservers to serve static CSS/JS without ever touching Rails
 
 
@@ -48,3 +48,31 @@ if (pick === 47 || pick === 92 || pick === 13) {
 
 print(inspect("My name is " + this.name));
 *plain old JS that i didn't have to write*
+
+
+SASS
+-While CSS isn't as complex as JS, it still has issues
+-CSS is difficult to manage without language features such as: selector nesting, inheritance, variables
+-SASS: enchanced CSS that once run trhough preprocessor, turns into plain CSS
+eg: Nesting SASS provided
+  .error {
+    a {
+      color: red;
+      text-decoration: none;
+    }
+    span {
+      color: #ff1a1a;
+      text-decoration: underline;
+    }
+  }
+
+-After preprocessor
+.error a {
+  color: red;
+  text-decoration: none;
+}
+
+.error span {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
