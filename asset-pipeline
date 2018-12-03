@@ -6,3 +6,11 @@ ASSET PATHS
   1. How does Rails know where things are
   2. Serving each file separately loads a page slowly and adding files together to load 1 JS and 1 CSS file
      (concatenation), isn't ideal
+
+ONE: Asset Pipeline has concept called Asset Paths for handling where to look
+  -Combination of folder paths for Rails to look for assets in
+  -Can access and asset vial URL with '/assets' in application
+  -Additional folders to search can be added to the Asset Path in the config/initializers/assets.rb file
+  eg: Rails.application.config.assets.paths << 'New Path'
+
+TWO: Manifests and Concatenation
