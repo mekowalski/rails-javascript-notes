@@ -23,3 +23,29 @@ eg: app/workers/lead_workers.rb *although i don't workers in many of my projects
 -Basic shape of any worker
   -include Sidekiq::Worker
   -define perform
+
+
+-Take long-running code out of one place and put it inside Perform
+eg:
+  class LeadsWorker
+    require 'csv'
+    include Sidekiq::Worker
+
+    def perform(leads_file)
+      CSV.foreach(leads_file, headers: true) do |lead|
+        Customer.create(email: lead[0], first_name: lead[1], last_name: lead[2])
+      end
+    end
+  end
+
+
+-Now need to tell controller to run the worker rather than process file inline
+eg: controllers/customers_controller.rb
+    class CustomersController < ApplicationController
+      def upload
+        LeadsWorker.perform_async(params[:leads].path)
+        redirect_to customers_path
+      end
+    end
+
+-Sidekiq improves user experience with off-loading long-running tasks into background worker
