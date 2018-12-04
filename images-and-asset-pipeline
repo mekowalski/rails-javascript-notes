@@ -1,0 +1,11 @@
+AP helps deal with images easier, build paths and deal with caching problems
+
+WHERE DO IMAGES GO
+-Images can be kept in app/assets/images which is already included in the asset paths by default
+-Possible to add more images by adding Rails.application.assets.paths
+-May access images with standard /assets URL, with a consistent URL looking everywhere for the image
+eg: "assets/image.png"
+
+-Because it's an array you can easily shovel in more directories in images are not on the list
+eg: config/application.rb
+    config.assets.paths << Rails.root.join('lib', 'randomeimagefolder')
