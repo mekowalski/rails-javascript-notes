@@ -1,10 +1,15 @@
 EXTERNAL STYLESHEETS
 -Previously loaded CSS from asset directories, which isn't required
 -Another way to load CSS is use of standard HTML <style> tags placed in <head> tag of application layout
+eg:
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  </head>
+
 
 VENDOR ASSETS
--Refer to External-JS-Libraries file, similar but instead of assets/javasripts and vendor/assets/javascripts
- it is  assets/stylesheets and vendor/assets/stylesheets
+-Refer to External-JS-Libraries file, similar but instead of assets/javascripts and vendor/assets/javascripts
+ it is assets/stylesheets and vendor/assets/stylesheets
 
 
 GEMS
