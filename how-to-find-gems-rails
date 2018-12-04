@@ -3,3 +3,23 @@ RUBYGEMS ECOSYSTEM
 -Many common issues have already been solved by someone releasing a gem to help, allowing developers to reach
  incredible levels of productivity
 -Ruby enables people to freely give back to the community of developers in the form of gems
+
+
+DO YOU NEED A GEM
+-Wealth of gems available is what sets Ruby apart from other languages
+-Gem Madness may occur where developers may consider a gem for every issue encountered
+
+
+WHERE TO LOOK
+-Can look for gems in the command line(terminal, console)
+eg: in a non-project directory
+    gem search ^twitter$ -d
+    =>
+    *** REMOTE GEMS ***
+
+    twitter (6.2.0)
+        Authors: Erik Michaels-Ober, John Nunemaker, Wynn Netherland, Steve
+        Richert, Steve Agalloco
+        Homepage: http://sferik.github.com/twitter/
+
+        A Ruby interface to the Twitter API.
