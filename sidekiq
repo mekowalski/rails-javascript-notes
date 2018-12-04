@@ -3,3 +3,23 @@ WORKERS
 -Processing file takes the same thread at the request/response therefore making it time consuming
 -File processing becomes a blocking action on thread
 -Rails provides many tools to move blocking tasks to a background worker allowing faster response
+
+
+SIDEKIQ
+-Sidekiq: moves lead processing to a background thread, most popular background worker
+eg: Add in Gemfile
+    gem 'sidekiq'
+    bundle install
+
+-Sidekiq relies on a Worker to define and process a job
+eg: app/workers/lead_workers.rb *although i don't workers in many of my projects*
+    class LeadsWorker
+      include SideKiq::Worker
+
+      def perform(leads_file)
+      end
+    end
+
+-Basic shape of any worker
+  -include Sidekiq::Worker
+  -define perform
