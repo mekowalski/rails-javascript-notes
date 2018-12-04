@@ -23,3 +23,19 @@ eg: in a non-project directory
         Homepage: http://sferik.github.com/twitter/
 
         A Ruby interface to the Twitter API.
+
+-gem search: takes a regex, handy if you know name or part of gem name
+-Ruby Toolbox: helpful site that sorts and organizes gems on rank of total downloads, releases and active
+ commits
+ *also COMPREHENSIVE*
+-Awesome Ruby and Awesome Rails Gem: 2 open resource, community maintained lists of most popular gems for
+ Ruby and Rails
+
+
+QUALITIES FOR CHOOSING GEMS
+-How popular is it
+  1. How many downloads, how recent are commits, how many versions
+  2. See if it's on Awesome Rails and Awesome Ruby
+  3. Google gem name and check out resources returned(gem tutorials, name errors)
+  4. StackOverflow for what community says about gem
+  5. Search Github for documentation, code, methods etc
