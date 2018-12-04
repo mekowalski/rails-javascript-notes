@@ -39,3 +39,9 @@ QUALITIES FOR CHOOSING GEMS
   3. Google gem name and check out resources returned(gem tutorials, name errors)
   4. StackOverflow for what community says about gem
   5. Search Github for documentation, code, methods etc
+
+-How well-maintained is it
+  1. Read code, it is put together expectantly, can you understand it, does it follow Ruby idioms/styles
+  2. Is it well-documented, it the README descriptive or bare minimum
+  3. Look at issues and PRs, how long are they open, are there active committers, have issues been resolved
+  4. Look for tests(/test or /spec DIRs) how many tests present
