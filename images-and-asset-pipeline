@@ -4,8 +4,33 @@ WHERE DO IMAGES GO
 -Images can be kept in app/assets/images which is already included in the asset paths by default
 -Possible to add more images by adding Rails.application.assets.paths
 -May access images with standard /assets URL, with a consistent URL looking everywhere for the image
-eg: "assets/image.png"
+eg: "assets/mountains.png"
 
 -Because it's an array you can easily shovel in more directories in images are not on the list
 eg: config/application.rb
     config.assets.paths << Rails.root.join('lib', 'randomeimagefolder')
+
+
+ASSET_PATH HELPER
+-asset_path: provides a way to retrieve relative path to an image file in AP
+eg:
+  asset_path('mountains.png')
+
+-If AP finds file, it returns path to image
+eg:
+  /assets/mountains.png
+
+-If file is in sub-folder in image DIR, that will need to be included
+eg:
+  asset_path('banner/mountains.png')
+  => /assets/banner/mountains.png
+
+-If asset_path cannot find file, path returned will prepend filename with /
+eg:
+  /mountains.png
+
+-asset_path is helpful got image paths located in CSS files
+eg:
+  .logo {
+    background-image: url(<%= asset_path('mountains') %>)
+  }
