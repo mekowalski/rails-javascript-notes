@@ -34,3 +34,15 @@ eg:
   .logo {
     background-image: url(<%= asset_path('mountains') %>)
   }
+
+
+IMAGE_TAG HELPER
+-image_tag: creates an <img> tag with the image path to actually display the image
+eg:
+  <%= image_tag 'mountains.png'%> CREATES
+  <img src='/assets/mountains.png' />
+
+-If AP cant find file, an image tag returned will prepend filename with /
+eg:
+  <img src='/mountains.png'>
+*because image doesn't exist, broken image will display on web page*
