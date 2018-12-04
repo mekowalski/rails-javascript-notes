@@ -4,7 +4,7 @@ PREPROCESSORS
  valid CSS/JS
 -Development: AP will run preprocessor on any file that needs to be processed every time it's requested
  (which is too slow)
--Running rake asste:precompile  which allows webservers to serve static CSS/JS without ever touching Rails
+-Running rake asset:precompile  which allows webservers to serve static CSS/JS without ever touching Rails
 
 
 COFFEESCRIPT
@@ -53,7 +53,10 @@ print(inspect("My name is " + this.name));
 SASS
 -While CSS isn't as complex as JS, it still has issues
 -CSS is difficult to manage without language features such as: selector nesting, inheritance, variables
--SASS: enchanced CSS that once run trhough preprocessor, turns into plain CSS
+-SASS: enhanced CSS that once run through preprocessor, turns into plain CSS
+-Adds power/elegance to basic language, helping organize large stylesheets(SASS Docs)
+-SASS allows use of features that don't exist in CSS such as: variables, nesting, mixins and inheritance
+ to name a a few(SASS Docs)
 eg: Nesting SASS provided
   .error {
     a {
