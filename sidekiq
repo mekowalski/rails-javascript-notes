@@ -1,0 +1,5 @@
+WORKERS
+-Rails Workers: processes that will allow execution tasks outside the main web app thread
+-Processing file takes the same thread at the request/response therefore making it time consuming
+-File processing becomes a blocking action on thread
+-Rails provides many tools to move blocking tasks to a background worker allowing faster response
