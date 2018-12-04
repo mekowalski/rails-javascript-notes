@@ -46,3 +46,15 @@ eg:
 eg:
   <img src='/mountains.png'>
 *because image doesn't exist, broken image will display on web page*
+
+
+FINGERPRINTING
+-Browser caching causes issues when image updates occur
+-AP added fingerprint to file when asset_path or image_tag is used(when fingerprint is turned on)
+-Fingerprinting is on by default with both Production and Development mode
+eg: fingerprinted path
+    /assets/mountains-331238805bdaebb4b05e9385bc1261f8.png
+    -Digest appended to filename
+    -Digest changes when file is update but doesn't cause issues with compatibility
+
+*TO AVOID CACHING ISSUES ALWAYS USE HELPERS!!!*
