@@ -42,3 +42,18 @@ eg: change and get response into usable variable
     <h1>
     <%= some erb tags%>
     <div><%= @resp.body if @resp %></div>
+
+
+PARSING THE RESPONSE
+-Many nodes will be returned as the response result
+-Parse with built-in JSON.parse method
+eg: searches controller
+    @resp Faraday.get'etc'
+      //code in here
+    end
+    body_hash = JSON.parse(@resp.body)
+    @venues = body_has['response']['venues']
+    render 'search'
+
+-body: parse into a variable called 'body_hash' now a RUby hash
+-access 'venues' under 'response' key
