@@ -1,0 +1,18 @@
+FARADAY
+-HTTP client library that abstracts and standardizes dome lower-level HTTP functions, aiding in building
+ requests and getting responses from API
+-Allows maintainence of the same client code even if changed in underlying library later
+eg: Faraday Gem
+    add to Gemfile and run 'bundle install'
+
+    //searches_controller.rb
+    def foursquare
+      Faraday.get'https://api.foursqaure.com/v2/venues/search' do |req|
+        req.params['client_id'] = client_id
+        req.params['client_secret'] = client_secret
+        req.params['v'] = '20160201'
+        req.params['near'] = params[:zipcode]
+        req.params['query'] = 'coffee shop'
+      end
+      render 'search'
+    end
