@@ -39,3 +39,11 @@ eg:
     "state": "New York",
     "zip": "10015"
   }
+
+
+FINDING AND USING APIs
+-To find a site API, try Googling: Sitename API or go to the site and look for a Developers/API link/section
+-Good APIs will have extensive documentation regarding how to use the API, functions available, what data to
+ access
+-Many APIs are different
+-Most good APIs also use REST and can have access to what API creator allows
