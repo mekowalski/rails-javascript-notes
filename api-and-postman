@@ -1,3 +1,52 @@
 TOOLS
 -Postman: Chrome app to easily manage API requests
 -JSONView: Chrome extension automatically making JSON data more readable
+
+
+API CREDENTIALS
+-Many API sites require a new app to be created in order to use, which will provide Client ID and Secret
+ (these are credentials)
+-API providers want to know who is accession their API
+-Credentials allow app authorization access to API
+
+
+FULL API REQUEST
+-With credentials not a request can be made with URL with Client ID and Secret
+eg:
+  https://api.foursquare.com/v2/venues/search?client_id=PERSONAL_CLIENT_ID&client_secret=PERSONAL_SECRET&ll=40.72107924768216,-73.98394256830215&v=20180730
+  -List of JSON formatted results
+  {
+    meta: {
+      code: 200,
+      requestId: "5c081e35db04f5265f3e0724"
+  },
+  response: {
+    venues: [
+      {
+      id: "4d406a44de17a0932403f86b",
+      name: "Pause Cafe",
+      location: {
+        address: "3 Clinton St",
+        crossStreet: "btwn E Houston & Stanton St",
+        lat: 40.72126434115774,
+        lng: -73.98397998480097,
+        labeledLatLngs: [
+          {
+            label: "display",
+            lat: 40.72126434115774,
+            lng: -73.98397998480097
+          }
+        ],
+        distance: 20,
+        postalCode: "10002",
+        cc: "US",
+        city: "New York",
+        state: "NY",
+        country: "United States",
+        formattedAddress: [
+          "3 Clinton St (btwn E Houston & Stanton St)",
+          "New York, NY 10002",
+          "United States"
+        ]
+      },
+      //etc
