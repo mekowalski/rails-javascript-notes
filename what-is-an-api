@@ -1,0 +1,16 @@
+SCREEN SCRAPING
+-A technique where a URL is requested in the same way a browser would, but done in code instead of seeing
+ rendered HTML
+-Having to parse HTML to see what's needed
+eg: Foursquare: coffee shops in NY
+    https://foursquare.com/explore?mode=url&near=New%20York&q=coffee%20shops
+    -Could use Nokogiri and Ruby to request page to parse data
+    //IRB
+    doc = Nokogiri::HTML(open('https://foursquare.com/explore?mode=url&near=New%20York&q=coffee%20shops'))
+
+    -Gives a full search results page from Foursquare and can inspect source, figuring out the results in a
+     specific tag are(<li>)
+    //IRB
+    doc.css('li.singleRecommendation').each do |rec|
+      #code in  here
+    end
