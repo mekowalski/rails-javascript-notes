@@ -57,3 +57,19 @@ eg: searches controller
 
 -body: parse into a variable called 'body_hash' now a RUby hash
 -access 'venues' under 'response' key
+
+  -template view changing resp body
+  <div>
+    <% if @venues %>
+      <ul>
+      <% @venues.each do |venue| %>
+        <li>
+          <%= venue["name"] %><br>
+          <%= venue["location"]["address"] %><br>
+          Checkins: <%= venue["stats"]["checkinsCount"] %>
+        </li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+  *successfully using Foursquare API*
