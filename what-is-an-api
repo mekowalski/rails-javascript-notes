@@ -26,3 +26,16 @@ API(APPLICATION PROGRAMMING INTERFACE)
 -Presentation: HTML tags, CSS classes, JS effects
 -HTML combines both Data and Presentation, consumed by browser
 -API is EXPLICITLY put together for purpose of being used by another system
+
+
+JSON(JAVASCRIPT OBJECT NOTATION)
+-Standard format for describing and defining data, human-readable
+-JSON looks like a Ruby hash, with cleaner presentation than reading tags
+eg:
+  {
+    "name": "Cuppa Joe's",
+    "address": "123 Not A Fake Address Street",
+    "city": "Real City",
+    "state": "New York",
+    "zip": "10015"
+  }
