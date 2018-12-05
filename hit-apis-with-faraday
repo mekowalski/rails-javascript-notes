@@ -16,3 +16,7 @@ eg: Faraday Gem
       end
       render 'search'
     end
+
+-Faraday.get(url): make 'request' to API endpoint
+-params: given from docs or Postman and set
+-search: renders a template with result
