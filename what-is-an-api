@@ -14,3 +14,15 @@ eg: Foursquare: coffee shops in NY
     doc.css('li.singleRecommendation').each do |rec|
       #code in  here
     end
+
+-What happens when minor CSS tweak occurs and .singleRecommentdation changes to .recommendationCard
+-The whole app would break and wouldn't be known until a user gets an error
+
+
+API(APPLICATION PROGRAMMING INTERFACE)
+-Way for system to interact with another via well-defined interface
+-Interface: any endpoint used to take actions and consume data on given applicaiton
+-Data: dynamic values like: names, addresses, checkins
+-Presentation: HTML tags, CSS classes, JS effects
+-HTML combines both Data and Presentation, consumed by browser
+-API is EXPLICITLY put together for purpose of being used by another system
