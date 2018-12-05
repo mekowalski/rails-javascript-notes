@@ -20,3 +20,25 @@ eg: Faraday Gem
 -Faraday.get(url): make 'request' to API endpoint
 -params: given from docs or Postman and set
 -search: renders a template with result
+
+
+RESPONSE OBJECT
+-Any time a request is made(Faraday.get), returned object is a response
+-body: where the server response will be
+-status: HTTP code the server returns from request
+eg: change and get response into usable variable
+    def foursquare
+      @resp = Faraday.get'https://api.foursqaure.com/v2/venues/search' do |req|
+        req.params['client_id'] = client_id
+        req.params['client_secret'] = client_secret
+        req.params['v'] = '20160201'
+        req.params['near'] = params[:zipcode]
+        req.params['query'] = 'coffee shop'
+      end
+      render 'search'
+    end
+
+    -In template view, look into the response body
+    <h1>
+    <%= some erb tags%>
+    <div><%= @resp.body if @resp %></div>
