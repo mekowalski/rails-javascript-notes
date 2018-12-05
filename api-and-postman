@@ -50,3 +50,11 @@ eg:
         ]
       },
       //etc
+
+-With a GET request, params are passed via querystring by putting a ? after the URL and formatting params
+
+
+API VERSIONING
+-Versioning is important in API usage, this guarantees that anyone using current version can keep using it
+ and upgrade to the new version whey they're able to
+-Versioning param becomes a form og contract between the API provider and consumer
