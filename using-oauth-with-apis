@@ -42,4 +42,20 @@ eg: URL
 *DOTENV is a great way to keep configuration variables for development but always add it to .gitignore in
  order to keep it private*
 
--
+-authenticate_user method will redirect user to the site of https://APISERVICE.fake/oauth2/authenticate if
+ the user isn't already logged in
+-Also set up before_action to check authentication
+eg: AppCon
+    before_action :authenticate_user
+
+    private 
+    def authenticate_user
+      client_id = ENV['FOURSQUARE_CLIENT_ID']
+      redirect_uri = CGI.escape("http://localhost:3000/auth")
+      foursquare_url = "https://foursquare.com/oauth2/authenticate?client_id=#{client_id}&response_type=code&redirect_uri=#{redirect_uri}"
+      redirect_to foursquare_url unless logged_in?
+    end
+
+    def logged_in?
+      !!session[:token]
+    end
