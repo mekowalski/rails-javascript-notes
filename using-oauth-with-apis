@@ -48,7 +48,7 @@ eg: URL
 eg: AppCon
     before_action :authenticate_user
 
-    private 
+    private
     def authenticate_user
       client_id = ENV['FOURSQUARE_CLIENT_ID']
       redirect_uri = CGI.escape("http://localhost:3000/auth")
@@ -59,3 +59,12 @@ eg: AppCon
     def logged_in?
       !!session[:token]
     end
+
+-Now when Users don't have access token stored in their session, they will be redirected to auth URL
+
+
+API REDIRECTS BACK TO APP SITE WITH CODE
+-When registered app with API service, redirect URL to your localhost server (ie: http://localhost:3000/auth)
+-In app code, need to handle the request
+eg: routes.rb
+    get '/auth'. to: 'sessions#create'
