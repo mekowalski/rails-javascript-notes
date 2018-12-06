@@ -35,3 +35,23 @@ eg: search.html.erb
 
 -Using API's error response to display what went wrong
 -Not all APIs structure their responses the same way, READ DOCUMENTATION
+
+
+HANDLING TIMEOUTS
+-Out of developer control is the possibility of request timeout across internet servers
+-Request timeouts occur for a number of reasons
+-rescue Faraday::TimeoutError in controller handles timeouts
+-Also force a timeout by setting request's timeout value
+eg: searches_controller.rb
+    begin
+      //code regarding @resp and req.params
+      req.options.timeout = 0
+      end
+      //code regarding the error handling
+      end
+      rescue Faraday::ConnectionFailed
+        @error = 'There was a timeout.  Please try again.'
+      end
+      render 'search'
+
+-L48: actually not necessary and should be deleted because not every request's timeout should be forced
