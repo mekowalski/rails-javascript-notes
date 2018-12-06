@@ -18,3 +18,28 @@ OAuth Authentication Flow
   1. Request access from provider site(often via a direct form)
   2. Redirect back to app site with a code
   3. Request token from provider using code
+
+
+CHECKING AUTHENTICATION
+-First check if a user has already authenticated with API Service
+-Also consider a User will ultimately be logged in if they have access token stored in their session
+eg: create logged_in? method in AppCon
+    private
+      def logged_in?
+        !!session[:token]
+      end
+
+-Redirect Users to Request Access
+-In OAuth flow, a User will need to be directed to the access site
+eg: URL
+    https://foursquare.com/oauth2/authenticate
+        ?client_id=YOUR_CLIENT_ID
+        &response_type=code
+        &redirect_uri=YOUR_REGISTERED_REDIRECT_URI
+
+-URL passes redirect_uri param to set up with API Service
+-Instead of always typing Client Id and Secret, create a .env file to hold key values and restart server
+*DOTENV is a great way to keep configuration variables for development but always add it to .gitignore in
+ order to keep it private*
+
+-
