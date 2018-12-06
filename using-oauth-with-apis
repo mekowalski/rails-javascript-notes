@@ -2,3 +2,7 @@ API USER AUTHENTICATION
 -Current level of Authentication to APIs is at the application level with Client Id and Secret
 -It is important, allowing API provider to ensure good usage by any client app
 -App-level auth gives access to app-level functions but this doesn't require a User
+-Not enough for user to be logged into (said API service) and use the App, API service needs to know that the
+ app is action on BEHALF of a user that the user is ALLOWED to that action
+-Asking a user to login to (said API service) on every request is a horrible experience
+-Security issues would arise logistically in 2 places, with (said API service) and your app
