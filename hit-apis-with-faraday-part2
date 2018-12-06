@@ -1,0 +1,6 @@
+HANDLING ERRORS
+-Can't necessarily prevent every possible error because we aren't in control of the API
+-Need to understand how to report API errors and handle them
+-Response holds the Body where all the data is and the Status, the Status contains the HTTP code
+-The Status is the equivalent to the HTTP code of good or bad
+eg: 200: OK, 400: ERROR
