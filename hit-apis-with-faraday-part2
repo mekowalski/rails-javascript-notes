@@ -23,3 +23,15 @@ eg: searches_controller.rb
 
 -Could have checked @resp.status = 200 but Faraday provides abstraction of .success? into readable, intent-
  revealing low-level HTTP
+
+-View handling possiblities
+eg: search.html.erb
+    <div>
+    <% if @error %>
+      <p><%= @error %></p>
+    <% elsif @venues %>
+      <ul>
+      //code here about venue details
+
+-Using API's error response to display what went wrong
+-Not all APIs structure their responses the same way, READ DOCUMENTATION
