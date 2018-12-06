@@ -6,3 +6,15 @@ API USER AUTHENTICATION
  app is action on BEHALF of a user that the user is ALLOWED to that action
 -Asking a user to login to (said API service) on every request is a horrible experience
 -Security issues would arise logistically in 2 places, with (said API service) and your app
+
+
+ENTER OAUTH
+-Provides a way for one application to authenticate to another on behalf of User by means of revokable,
+ expirable token
+-Also provides a staandard way for app to tell API service 'Hey this user says we can do things for them'
+ explicitly authorizing the application
+
+OAuth Authentication Flow
+  1. Request access from provider site(often via a direct form)
+  2. Redirect back to app site with a code
+  3. Request token from provider using code
