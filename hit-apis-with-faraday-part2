@@ -4,3 +4,22 @@ HANDLING ERRORS
 -Response holds the Body where all the data is and the Status, the Status contains the HTTP code
 -The Status is the equivalent to the HTTP code of good or bad
 eg: 200: OK, 400: ERROR
+
+-A reading of a status will have a Meta node with error information and a Response node either empty or
+ filled
+-With the information provided, error handling can be made in app
+eg: searches_controller.rb
+    @resp = Faraday.get('stuff')
+      // this code here
+    end
+
+    body = JSON.parse(@resp.body)
+    if @resp.success?
+      @venues = body['response']['venues']
+    else
+      @error = body['meta']['errorDetail']
+    end
+    render 'search'
+
+-Could have checked @resp.status = 200 but Faraday provides abstraction of .success? into readable, intent-
+ revealing low-level HTTP
