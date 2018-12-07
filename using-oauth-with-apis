@@ -68,3 +68,6 @@ API REDIRECTS BACK TO APP SITE WITH CODE
 -In app code, need to handle the request
 eg: routes.rb
     get '/auth'. to: 'sessions#create'
+
+
+REQUEST TOKEN FROM API SERVICE WITH CODE
