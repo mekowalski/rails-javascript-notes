@@ -31,3 +31,15 @@ Extracting A Service Object
       end
 
 *Familiar, moving code from controller to service object, passing in params from controller*
+
+
+BACK TO CONTROLLER
+-Instantiate new APIService object in SessionsCon and call #authenticate! method
+eg: sessions_controller.rb
+    def create
+      foursquare = APIService.new
+      session[:token] = foursquare.authenticate!(ENV['FOURSQUARE_CLIENT_ID'], ENV['FOURSQUARE_SECRET'], params[:code])
+      redirect_to root_path
+    end
+
+*Controller is much cleaner and it only has to know that APIService can provide OAuth Token*
