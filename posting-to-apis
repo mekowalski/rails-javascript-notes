@@ -103,3 +103,21 @@ eg: tips/index.html.erb
         </li>
       <% end %>
     </ul>
+
+
+POST PARAMS VS POST BODY
+-API endpoints that have been used are parameters to pass data
+-GET request are querystring parameters
+POST request are www-form-urlencoded parameters, acting as if they are created a from and clicked submit
+-Other API providers may require POST data instead of JSON-formatted text in request body
+-Faraday makes it simple to POST with JSON in body request
+eg: BEFORE
+    Faraday.post('https://url/to/api') do |req|
+      req.params['my_params'] = my_value
+    end
+
+    AFTER
+    Faraday.post('https://url/to/api') do |req|
+      req.bpdy = '{ 'my_params': my_value}'
+    end
+*Assign request body to properly formatted JSON string
