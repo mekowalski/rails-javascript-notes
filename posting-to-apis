@@ -9,3 +9,25 @@ eg: searches/search.html.erb
     -Should look something like: B2JPA4ZSC5244X1Q1C2OPWYGTZ2LSALF1Z
 
 -Would never output token in real world but just to play around with Postman
+-Postman will provide list of previous queries under History, grab ID value
+eg: post to https://api.foursquare.com/v2/tips/add
+    -set params per the docs:
+    venueId       YOUR_VENUE_ID
+    text          Love this place!
+    oauth_token   YOUR_TOKEN
+    v             20160201
+
+    -hit Send and should get a response like
+    "response": {
+      "tip": {
+        "id": "56c223e1498e82b67c98f548",
+        "createdAt": 1455563745,
+        "text": "Love this place!",
+        "type": "user",
+        "canonicalUrl": "https://foursquare.com/item/56c223e1498e82b67c98f548",
+        "likes": {
+          "count": 0,
+          "groups": []
+        },
+    // ...
+*created a tip*
