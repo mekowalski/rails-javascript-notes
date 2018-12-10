@@ -43,3 +43,24 @@ eg: sessions_controller.rb
     end
 
 *Controller is much cleaner and it only has to know that APIService can provide OAuth Token*
+
+
+REFACTORING FRIENDS
+-Need to also clean up #friends action , extracting API call from #friends action to the service object
+eg: service/api_service.rb
+    def friends(token)
+      resp = Faraday.get('https://api/foursquare.com/v2/users/self/friends') do |req|
+        req.params['oauth_token'] = token
+        req.params['v'] = '20160201'
+      end
+      JSON.parse(resp.body)['response']['friends']['items']
+    end
+
+*Go as far as just to return the part of JSON response needed to build friends list*
+
+-Update #friends to use service object
+eg: searches_controller.rb
+    def friends
+      foursquare = APIService.new
+      @friends = foursquare.friends(session[:token])
+    end
