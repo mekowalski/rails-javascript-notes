@@ -31,3 +31,34 @@ eg: post to https://api.foursquare.com/v2/tips/add
         },
     // ...
 *created a tip*
+
+
+POSTING IN RAILS WITH FARADAY
+-Create a way to POST tip on a venue after searching for it
+eg: search.html.erb
+    <h1>Search for Coffee Shops Near Me</h1>
+    <%= form_tag '/search' do %>
+      <%= label_tag :zipcode %>
+      <%= text_field_tag :zipcode %>
+      <%= submit_tag "Search!" %>
+    <% end %>
+    <div>
+      <% if @error %>
+        <p><%= @error %></p>
+      <% elsif @venues %>
+        <ul>
+        <% @venues.each do |venue| %>
+          <li>
+            <%= venue["name"] %><br>
+            <%= venue["location"]["address"] %><br>
+            Checkins: <%= venue["stats"]["checkinsCount"] %><br>
+            <%= form_tag '/tips' do %>
+              <%= hidden_field_tag :venue_id, venue["id"] %>
+              Add tip: <%= text_field_tag :tip %><%= submit_tag "Add Tip" %>
+            <% end %>
+          </li>
+        <% end %>
+        </ul>
+      <% end %>
+    </div>
+*Need to keep track of venue ID, hold onto it in hidden_field_tag. NOW IS GOOD TIME TO DELETE OUTPUTS*
