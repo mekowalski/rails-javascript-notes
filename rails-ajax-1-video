@@ -1,1 +1,13 @@
 AJAX: the ability to make requests behind the scenes
+Jesse James Garret: ajax, new approach web applications
+  -Interface should never be locked
+  -Users should be able to continue using web site
+
+[]Hijack click event
+  -manually bind event to the element
+  -adding function to the click element to fire AJAX request
+  -stop browser from default actions (preventDefault)
+
+[]Once in click event, fire AJAX request to get DATA
+
+[]Need to place that DATA in the DOM, (add to page)
