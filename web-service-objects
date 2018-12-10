@@ -5,3 +5,29 @@ SERVICE OBJECTS
 -Dealing with another entity's data
 -Service Object: an object that can encapsulate the inner workings of business or domain logic that isn't
  strictly the responsibility of a single AR Model
+
+
+REFACTORING AUTHENTICATION
+Extracting A Service Object
+  1. Create app/services folder and create api_service.rb file within
+  2. Define APIService class
+  eg: app/services/api_service.rb
+      class APIService
+      end
+
+  3. Move API interaction from SessionCon into APIService
+    -Define method #authenticate!
+    eg:
+      def authenticate!(client_id, client_secret, code)
+        resp = Faraday.get('https://foursquare.com/oauth2/access_token') do |req|
+          req.params['client_id'] = client_id
+          req.params['client_secret'] = client_secret
+          req.params['grant_type'] = 'authorization_code'
+          req.params['redirect_uri'] = 'http://localhost:3000/auth'
+          req.params['code'] = code
+        end
+        body = JSON.parse(resp.body)
+        body['access_token']
+      end
+
+*Familiar, moving code from controller to service object, passing in params from controller*
