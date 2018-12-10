@@ -1,0 +1,7 @@
+SERVICE OBJECTS
+-Single Responsibility Principle: purpose of MVC components
+-Controller should not be responsible of the API service and the logic of data from API
+-Can not move logic out of controller and onto AR Model, no longer working with our own data
+-Dealing with another entity's data
+-Service Object: an object that can encapsulate the inner workings of business or domain logic that isn't
+ strictly the responsibility of a single AR Model
