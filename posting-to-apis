@@ -1,0 +1,11 @@
+WORKING WITH POST API ENDPOINT
+-Once data begins to change on server, requests are made via POST
+
+-POSTING WITH POSTMAN
+-Need OAuth token to do this, temporarily display on the page to copy and paste it
+eg: searches/search.html.erb
+    <%= session[:token] %>
+    -Output session[:token], run Rails server and browse /search
+    -Should look something like: B2JPA4ZSC5244X1Q1C2OPWYGTZ2LSALF1Z
+
+-Would never output token in real world but just to play around with Postman
