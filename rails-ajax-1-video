@@ -3,10 +3,18 @@ Jesse James Garret: ajax, new approach web applications
   -Interface should never be locked
   -Users should be able to continue using web site
 
-[]Hijack click event
+[X]Hijack click event
   -manually bind event to the element
   -adding function to the click element to fire AJAX request
   -stop browser from default actions (preventDefault)
+  eg: .js file
+  $(function() { //this helps load the entire document for the click event to occur
+    $('tag.classname').on('event', function(e) {
+      alert('you clicked this link')
+      e.preventDefault()
+    })
+  })
+
 
 []Once in click event, fire AJAX request to get DATA
 
