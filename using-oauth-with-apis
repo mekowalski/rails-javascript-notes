@@ -93,3 +93,21 @@ eg: sessions_controller.rb
     end
 
 *skip authenticate_user before_action, when creating session otherwise an infinite loop will arise*
+
+
+USER ACCESS TOKEN TO ACCESS API
+-Users have API tokens, therefore can make calls to all the API endpoints as long as tokens are included
+ in request
+eg: routes.rb
+    get '/friends', to: 'searches#friends'
+
+    -add handling in controller
+    def friends
+      resp = Faraday.get('https://api.foursquare.com/v2/users/self/firneds') do |req|
+        req.params['oauth_token'] = session[:token]
+        req.params['v'] = '20160201'
+      end
+      @friends = JSON.parse(resp.body)['response']['friends']['items']
+    end
+
+*may API providers give a way to try API calls right from docs*
