@@ -3,6 +3,7 @@ Jesse James Garret: ajax, new approach web applications
   -Interface should never be locked
   -Users should be able to continue using web site
 
+MANUALLY TRIGGERING AJAX - CLIENT SIDE LOGIC MODEL
 [X]Hijack click event
   -manually bind event to the element
   -adding function to the click element to fire AJAX request
@@ -76,4 +77,16 @@ $.get(this.href).success(function(json) {
   //i'm not iterating because i'm specificially working with a show, not an index
   //i also am not able to figure this one out so HTML version works well for now
   $('div.beers').append(json)
+})
+
+
+ASK SERVER WHAT WHAT TO DO VIA AJAX - SERVER SIDE AJAX MODEL
+$(function() { //click on link and fire AJAX request to server
+  $('a.companies-beer').on('click', function(e) {
+    $.ajax({ //server will respond with JavaScript(containing instructions on what to do), not HTML or JSON
+      url: this.href,
+      dataType: 'script'
+    })
+    e.preventDefault()
+  })
 })
