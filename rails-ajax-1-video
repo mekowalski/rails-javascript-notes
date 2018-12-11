@@ -58,3 +58,10 @@ $(function() {
     // alert('you clicked this link')
   })
 })
+
+
+[X]Rewrite AJAX in simpler way
+-High level abstraction
+  $.get(this.href).success(function(response) {
+    $('div.beers').html(response)
+  })
