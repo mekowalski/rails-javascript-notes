@@ -20,12 +20,14 @@ Jesse James Garret: ajax, new approach web applications
   -fire some AJAX
   -get a response
   -load that response into page HTML
-  eg:
+  eg: .js file
   $(function() { //this helps load the entire document for the click event to occur
     $('tag.classname').on('event', function(e) {
+      //Just clicked on this link
+      //use the HREF attr to as the URL
       $.ajax({
-        method: 'GET'
-        url: //what URL to fire request to
+        method: 'GET',
+        url: this.href
       })
       .done(function(data) {
         //GET the response
