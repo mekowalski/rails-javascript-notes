@@ -21,5 +21,22 @@ Jesse James Garret: ajax, new approach web applications
   -get a response
   -load that response into page HTML
   eg:
+  $(function() { //this helps load the entire document for the click event to occur
+    $('tag.classname').on('event', function(e) {
+      $.ajax({
+        method: 'GET'
+        url: //what URL to fire request to
+      })
+      .done(function(data) {
+        //GET the response
+
+        console.log(data)
+        //Want to load that data into the DOM
+      })
+
+      alert('you clicked this link')
+      e.preventDefault()
+    })
+  })
 
 []Need to place that DATA in the DOM, (add to page)
