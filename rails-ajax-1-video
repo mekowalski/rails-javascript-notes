@@ -16,7 +16,7 @@ Jesse James Garret: ajax, new approach web applications
   })
 
 
-[]Once in click event, fire AJAX request to get DATA
+[X]Once in click event, fire AJAX request to get DATA
   -fire some AJAX
   -get a response
   -load that response into page HTML
@@ -42,3 +42,19 @@ Jesse James Garret: ajax, new approach web applications
   })
 
 []Need to place that DATA in the DOM, (add to page)
+$(function() {
+  $('a.companies-beer').on('click', function(e) {
+    $.ajax({
+      method: 'GET',
+      url: this.href
+    })
+    .done(function(response) { //calback function after AJAX(L10-13) is fired
+      //GET the response
+      //Want to load that data into the DOM
+      $('div.beers').html(response) //this kind of works: it will sometimes go to a new page for beer show
+      //or sometimes will append to the DOM
+    })
+    e.preventDefault()
+    // alert('you clicked this link')
+  })
+})
