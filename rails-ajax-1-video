@@ -41,6 +41,8 @@ Jesse James Garret: ajax, new approach web applications
     })
   })
 
+
+WHEN SERVER RESPONDS WITH HTML
 [X]Need to place that DATA in the DOM, (add to page)
 $(function() {
   $('a.companies-beer').on('click', function(e) {
@@ -65,3 +67,13 @@ $(function() {
   $.get(this.href).success(function(response) {
     $('div.beers').html(response)
   })
+
+
+WHEN SERVER RESPONDS WITH JSON
+-Iterate over JSON Data and inject into DOM as pleased
+-What i couldn't figure out
+$.get(this.href).success(function(json) {
+  //i'm not iterating because i'm specificially working with a show, not an index
+  //i also am not able to figure this one out so HTML version works well for now
+  $('div.beers').append(json)
+})
