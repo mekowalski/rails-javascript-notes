@@ -48,7 +48,7 @@ $(function() {
       method: 'GET',
       url: this.href
     })
-    .done(function(response) { //calback function after AJAX(L10-13) is fired
+    .done(function(response) { //callback function after AJAX(L11-16) is fired
       //GET the response
       //Want to load that data into the DOM
       $('div.beers').html(response) //this kind of works: it will sometimes go to a new page for beer show
