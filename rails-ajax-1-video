@@ -41,7 +41,7 @@ Jesse James Garret: ajax, new approach web applications
     })
   })
 
-[]Need to place that DATA in the DOM, (add to page)
+[X]Need to place that DATA in the DOM, (add to page)
 $(function() {
   $('a.companies-beer').on('click', function(e) {
     $.ajax({
