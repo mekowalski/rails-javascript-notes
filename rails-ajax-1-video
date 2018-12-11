@@ -17,5 +17,9 @@ Jesse James Garret: ajax, new approach web applications
 
 
 []Once in click event, fire AJAX request to get DATA
+  -fire some AJAX
+  -get a response
+  -load that response into page HTML
+  eg:
 
 []Need to place that DATA in the DOM, (add to page)
