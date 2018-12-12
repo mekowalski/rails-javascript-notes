@@ -12,6 +12,9 @@ eg: companies.js file
       })
     })
 
+    -Need URL to submit POST request to
+    -Need the form data
+
 []Then take form data and send it to server as AJAX Post request
   -Have the form to fill out information
   -How to know the URL of the POST request
