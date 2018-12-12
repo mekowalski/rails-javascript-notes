@@ -1,0 +1,3 @@
+Submit Form via Client Side Model
+-Add new Beer and add that on the DOM
+-New form and add that(append) under the current index of beers
