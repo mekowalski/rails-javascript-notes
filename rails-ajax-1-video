@@ -81,6 +81,10 @@ $.get(this.href).success(function(json) {
 
 
 ASK SERVER WHAT WHAT TO DO VIA AJAX - SERVER SIDE AJAX MODEL
+  -Bind generic AJAX request for more instructions to click event
+  -Have the server render some JS as response
+  -Browser(jQuery) will execute JS response
+  *Much more complex pattern*
 $(function() { //click on link and fire AJAX request to server
   $('a.companies-beer').on('click', function(e) {
     $.ajax({ //server will respond with JavaScript(containing instructions on what to do), not HTML or JSON
