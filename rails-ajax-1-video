@@ -85,6 +85,8 @@ ASK SERVER WHAT WHAT TO DO VIA AJAX - SERVER SIDE AJAX MODEL
   -Have the server render some JS as response
   -Browser(jQuery) will execute JS response
   *Much more complex pattern*
+  -Includes: a .js view file, a partial with js AND the server side ajax function below
+
 $(function() { //click on link and fire AJAX request to server
   $('a.companies-beer').on('click', function(e) {
     $.ajax({ //server will respond with JavaScript(containing instructions on what to do), not HTML or JSON
