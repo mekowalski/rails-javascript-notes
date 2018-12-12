@@ -4,6 +4,14 @@ Submit Form via Client Side Model
 
 -Need to somehow use the form when creating a new Beer and append that to the list of current beers
 []First hijack the New Beer submit on form
+eg: companies.js file
+    $(function() {
+      $('a.companies-new-beer').on('click', function(e) {
+        e.preventDefault()
+        alert('this worked!')
+      })
+    })
+
 []Then take form data and send it to server as AJAX Post request
   -Have the form to fill out information
   -How to know the URL of the POST request
