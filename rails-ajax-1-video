@@ -96,3 +96,15 @@ $(function() { //click on link and fire AJAX request to server
     e.preventDefault()
   })
 })
+
+
+REMOTE: TRUE
+-ABSTRACT AF
+-Comment our entire .js file
+-In the .html.erb file that is being modified, in link tag include remote: true
+  1. When a link is clicked
+  2. Rails automatically adds a click event to fire AJAX request
+  3. AJAX request pointed to URL provided in the link _path(ie: company_beer_path(@company, beer))
+  4. Then renders the correct view for that path(also connected to controller#action)
+  5. Therefore client side code doesn't need to be written
+-Still can use JS but code in Rails stack entirely
