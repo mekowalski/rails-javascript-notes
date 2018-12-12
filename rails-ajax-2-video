@@ -1,3 +1,12 @@
 Submit Form via Client Side Model
 -Add new Beer and add that on the DOM
 -New form and add that(append) under the current index of beers
+
+-Need to somehow use the form when creating a new Beer and append that to the list of current beers
+[]First hijack the New Beer submit on form
+[]Then take form data and send it to server as AJAX Post request
+  -Have the form to fill out information
+  -How to know the URL of the POST request
+[]Take data from AJAX POST request and create corresponding instance
+  -Then append that new Beer to the list of current beers(with a link as the others have)
+[]Send back HTML/JSON of new Beer added and append  to DOM
