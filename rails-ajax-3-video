@@ -5,5 +5,12 @@ ORDER OF OPERATIONS
   /url
   Controller#Action
   Layout
-    application.js //all javascript, shouldn't have access to Rails stack
+    application.js //all javascript, shouldn't have access to Rails stack(no models, very little to no Ruby)
     View
+    *My actual beer app isn't about adding more fields to use, it's about trying to retrieve all the fields
+    on my beer and appending that in the DOM*
+
+REMOTE TRUE
+  -Load the initial form with one field for more than one field on initial payload
+  -When button is clicked, going to ask server for more HTML via AJAX
+  -Then drop that into the HTML form
