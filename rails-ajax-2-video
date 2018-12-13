@@ -7,7 +7,7 @@ Submit Form via Client Side Model
 eg: companies.js file
     -hijack the form and append form to the dom
     $(function() {
-      $('a.companies-new-beer').on('click', function(e) {
+      $('a.companies-new-form').on('click', function(e) {
         $.get(this.href).success(function(response) {
           $('div.new-beers').html(response)
         })
