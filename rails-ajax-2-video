@@ -14,6 +14,7 @@ eg: companies.js file
 
     -Need URL to submit POST request to
     -Need the form data
+*What ever you bound the event to, will always be the value of THIS*
 
 []Then take form data and send it to server as AJAX Post request
   -Have the form to fill out information
