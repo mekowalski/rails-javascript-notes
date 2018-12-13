@@ -32,4 +32,23 @@ eg: companies.js file
   -How to know the URL of the POST request
 []Take data from AJAX POST request and create corresponding instance
   -Then append that new Beer to the list of current beers(with a link as the others have)
+eg: companies.js
+    $(function() {
+      $('#new_beer').on('submit', function(e) {
+        //need URL to submit the POST request to
+        //need the form data
+        //low level (but i really don't understand this at all)
+        $.ajax({
+          type: ($("input[name='_method']").val() || this.method),
+          url: this.action,
+          data: $(this).serialize(),
+          success: function(response) {//unable to figure this out
+            console.log(response)
+          }
+        })
+        //Send POST request to correct place
+        e.preventDefault()
+      })
+    }
+
 []Send back HTML/JSON of new Beer added and append  to DOM
