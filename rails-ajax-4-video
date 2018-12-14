@@ -1,1 +1,6 @@
 HANDLEBARS AND JS PROTOYPES WITH RAILS AND AJAX
+
+*Done with TodoMVC application*
+[x]Hijack click event of form
+[]Get data to submit form correctly
+  -Always think about requests and response
