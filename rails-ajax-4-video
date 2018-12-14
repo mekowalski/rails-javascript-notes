@@ -7,3 +7,6 @@ HANDLEBARS AND JS PROTOYPES WITH RAILS AND AJAX
 
 []Retrieve JSON object
 []Append to DOM
+
+Handlebars: like ERB but for JavaScript
+eg: <%= inject id of item %> EQUIVALENT TO {{id}}
