@@ -42,3 +42,29 @@ eg: <%= inject id of item %> EQUIVALENT TO {{id}}
         </div>
       </div>
     "
+
+-In the lists/show view, create a template, copying outerHTML from console.  Make it generic
+eg: lists/show.html.erb
+    -make this generic, instead of item_22, it will be item_{{id}}
+    
+    <script id='item-template' type="text/x-handlebars-template">
+    <li class="item" id="item_22">
+    <div class="view">
+      <form class="edit_item" id="edit_item_22" action="/lists/11/items/22" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="✓">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="r9stadHoPnK3hMDHRYfPK8/51mg3RpItzxnXyq2tCBgtW2aHSKl4IhxwR8HJZK6szawxNt5wtN1Gdgg12JrBkg==">
+        <input name="item[status]" type="hidden" value="0">
+        <input class="toggle" type="checkbox" value="1" name="item[status]" id="item_status">
+      </form>
+
+      <label>Learn Handlebars</label>
+
+      <form class="button_to" method="post" action="/lists/11/items/22">
+        <input type="hidden" name="_method" value="delete">
+        <input class="destroy" type="submit" value="x">
+        <input type="hidden" name="authenticity_token" value="r9stadHoPnK3hMDHRYfPK8/51mg3RpItzxnXyq2tCBgtW2aHSKl4IhxwR8HJZK6szawxNt5wtN1Gdgg12JrBkg==">
+      </form>
+    </div>
+    </li>
+    </script>
