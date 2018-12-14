@@ -4,3 +4,6 @@ HANDLEBARS AND JS PROTOYPES WITH RAILS AND AJAX
 [x]Hijack click event of form
 []Get data to submit form correctly
   -Always think about requests and response
+
+[]Retrieve JSON object
+[]Append to DOM
