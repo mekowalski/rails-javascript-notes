@@ -4,3 +4,13 @@ Choice of building and providing an API
 2. Data is only valuable to company, but accessed in multiple ways(web app, ios app, android app), or
    distribution of service, or just using front-end frameworks, therefore build an Internal API to provide
    common access
+
+EXTERNAL API CONSIDERATIONS
+-External APIs are extremely valuable to web growth
+-Intended to be used by variety of developers
+-Documentation: External API must extensively be documented to support dev community(specifications, samples,
+ multiple languages, libraries and gems)
+-Versioning: make sure not to release code in a way that breaks app
+-Auth & Security: External API is accessed publicly therefore needs robust access control and security
+-Service Quality: Expectations of quality, uptime, response time, rate limiting access are a few reliances
+ developers count on
