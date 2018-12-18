@@ -1,3 +1,7 @@
 Returning Raw Strings from Controller Actions
 -Follow along in returning-string-data-v-000
 -render plain: is called in order to explicitly render plain text, NOT render a template
+
+Consuming Simple API endpoint with AJAX
+-Provide way for user to request API endpoint
+-Truncate: to only show portion of potentially long return of html(body, description, summary, etc)
