@@ -5,3 +5,7 @@ Returning Raw Strings from Controller Actions
 Consuming Simple API endpoint with AJAX
 -Provide way for user to request API endpoint
 -Truncate: to only show portion of potentially long return of html(body, description, summary, etc)
+
+Replace Text with API Response
+-Replace inner text to identify the API response(via predictable ID)
+-update JS to find correct tag by class or ID and replace the text
