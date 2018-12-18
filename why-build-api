@@ -1,0 +1,6 @@
+Choice of building and providing an API
+1. Data is valuable to more than application, or the app has valuable integration points for other
+   applications to provide certain services, therefore build External API and open it to 3rd party developers
+2. Data is only valuable to company, but accessed in multiple ways(web app, ios app, android app), or
+   distribution of service, or just using front-end frameworks, therefore build an Internal API to provide
+   common access
