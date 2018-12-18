@@ -14,3 +14,18 @@ EXTERNAL API CONSIDERATIONS
 -Auth & Security: External API is accessed publicly therefore needs robust access control and security
 -Service Quality: Expectations of quality, uptime, response time, rate limiting access are a few reliances
  developers count on
+
+
+INTERNAL API CONSIDERATIONS
+-Internal APIs provide access to data for multiple internal apps
+-Generally less strenuous concerns considering an individual developer is in control of all apps that has
+ access
+-Documentation: Still pertinent but won't have to provide great support for wide variety of consumers and
+ docs are more utility than elaboration
+-Versioning: Still considered dependent on development process but consumers will all be known and won't have
+ to worry about beta versions of the API being used
+-Auth & Security: A concern but with an individual developer in charge, they will know the access of app.
+ Browsers implement Same origin Security Policy that prevents page from running a script to access data from
+ a different origin
+-Service Quality: Developer can't slack on Internal APIs because it is mission-critical and handles more
+ requests than External APi.  Performance, response and uptime are still important
