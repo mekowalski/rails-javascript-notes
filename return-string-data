@@ -1,0 +1,3 @@
+Returning Raw Strings from Controller Actions
+-Follow along in returning-string-data-v-000
+-render plain: is called in order to explicitly render plain text, NOT render a template
