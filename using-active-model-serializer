@@ -34,3 +34,23 @@ USING AMS
      @object = Object.find(params[:id])
      render json: @object
    end
+
+
+RENDERING ASSOCIATION
+-AMS is modeled after Rails Models and Controllers
+-Rather than build serialization of association into the object, create a new AssociateSerializer
+eg:
+1. rails g serializer associate
+2. Add associate attributes
+   eg:
+   class AssociateSerializer < ActiveModel::Serializer
+     attributes: id, :name
+   end
+3. Modify associates_controllers#show to handle JSON request
+   eg:
+   class AssociatesController < ApplicationController
+     def show
+       @associate = Associate.find(params[:id])
+       render json: @associate, status: 200
+     end
+   end
