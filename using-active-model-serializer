@@ -5,4 +5,12 @@
 ACTIVEMODEL::SERIALIZER
 -ActiveModel::Serializer(AMS): provdes convention-based approach to serializing resources in a Rails way
 -By default Rails will use serializer if simply calling 'render json: @object' in controller
--
+-In previous serializer written by hand, explicitly tell Rails what data to return
+-AMS will take care of this ^^^ for us
+-More importantly, AMS doesn't require building out JSON strings
+
+-RAILS 5 goal is to allow creation of lean, efficient API-only Rails apps.
+  -M and C without V
+  -Popularity with robust front-end frameworks(React and Angular) Rails needed a strip down to serve as an
+   API and AMS
+  -Rails moves forward by NOT being tied to View layer
