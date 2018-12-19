@@ -54,3 +54,19 @@ eg:
        render json: @associate, status: 200
      end
    end
+
+-How to add Associate name to Object JSON?
+-Lean on Rails convention of belongs_to and has_many
+eg: ObjectSerializer
+    class ObjectSerializer < ActiveModel::Serializer
+      attributes :id, :title, :description
+      belongs_to :associate
+    end
+
+-Render a list of an Associate's objects along with Associates info?
+-Still lean on Rails associations
+eg: AssociateSerializer
+    class AssociateSerializer < ActiveModel::Serializer
+      attributes :id, :name
+      has_many :objects
+    end
