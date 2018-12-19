@@ -5,3 +5,17 @@ SERIALIZATION
 -Data is what's neccessary, NOT the formatting
 -Serialization: Process which executable code is represented as a string that can be consumed anywhere
 -Serializing an object maintains the state(current object values)
+-Class definitions tell what any object can look like VS serialized object tells what ONE object does look
+ like
+
+-XML: Structured, tag-based markup similar to HTML
+eg:
+  <post>
+    <id>1</id>
+    <title>This is a blog post</title>
+    <description>Description of the blog post inside this tag</description>
+  </post>
+
+-XML is the lingua franca of system communication
+-Problem with XML is parsing which is a tedious job
+-XML also has potential to inflate size of result dramatically
