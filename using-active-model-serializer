@@ -14,3 +14,17 @@ ACTIVEMODEL::SERIALIZER
   -Popularity with robust front-end frameworks(React and Angular) Rails needed a strip down to serve as an
    API and AMS
   -Rails moves forward by NOT being tied to View layer
+
+
+USING AMS
+1. Refactor using AMS, adding gem to Gemfile
+   eg: gem 'active_model_serializers'
+   -bundle install
+2. Generate ActiveModel::Serializer for Object
+   eg: rails g serializer object
+   *if using old code, make sure to delete existing object_serializer.rb before running generator*
+   
+   -generated object_serialier.rb file:
+    class ObjectSerializer < ActiveModel::Serializer
+      attributes :id
+    end
