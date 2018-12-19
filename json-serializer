@@ -1,0 +1,7 @@
+Need one endpoint to make one request and get back structured data representing site
+
+SERIALIZATION
+-Controller renders template containing HTML and data needed
+-Data is what's neccessary, NOT the formatting
+-Serialization: Process which executable code is represented as a string that can be consumed anywhere
+-Serializing an object maintains the state(current object values)
