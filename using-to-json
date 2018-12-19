@@ -1,3 +1,14 @@
 -In previous lesson, Serializer worked will BUT with String concatenation and keeping track of all the single
  and double quotes is a nightmare
 -Imagine writing more serializers for more than 4 fields
+
+
+TO_JSON
+-Rails provides to_json method taking, object and converting it TO_JSON!!!
+eg: posts_controller.rb
+    def post_data
+      post = Post.find(params[:id])
+      render json: post.to_json
+    end
+
+-Updates post body without changing a thing
