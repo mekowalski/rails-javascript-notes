@@ -47,3 +47,42 @@ Side-note About HTTP Codes
 -302 considered temporary or found
 -AJAX requests don't follow redirects because they CANNOT
 -AJAX chooses NOT to follow link and instead takes whatever rendered DATA is
+
+
+RENDERING RESPONSE
+-Get a JSON representation of object newly created without redirect or page refresh
+1. Remove redirect from controllers and use AMS
+  eg: objects_controller.rb
+  def create
+    @object = Object.find(params[:id])
+    render json: @object, status 201 //201 is OK and that resources was created
+  end
+2. Make additions to template to handle response and display it on page
+eg: objects/new.html.erb
+    <%= for_for(@object) do |f| %>
+      //code for :title
+      //code for :description
+      <div class='actions'>
+       <%= f.submit %>
+      </div>
+    <% end %>
+
+    <div id="ObjectResult">
+      <h2 id="ObjectTitle"></h2>
+      <p id="ObjectBody"></p>
+    </div>
+
+    <script type='text/javascript' charset='utf-8'>
+      $(function() {
+        $('form').submit(function(e) {
+          e.preventDefault()
+          var values = $(this).serialize()
+          var objecting = $.post('/objects', values)
+          posting.done(function(data) {
+            var object = data
+            $('#objectTitle').text(object['title'])
+            $('#objectBody').text(object['description'])
+          })
+        })
+      })
+    </script>
