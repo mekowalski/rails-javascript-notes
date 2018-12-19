@@ -36,3 +36,19 @@ eg: posts_controller.rb
     end
 
 -Can use 'only' on main object and included objects
+
+
+RESPOND TO REQUESTS WITH DIFFERENT FORMATS
+-respond_to can specify what to render depending on if the request is looking for HTMl or JSON
+eg: posts_controller.rb
+    def show
+      @post = Post.find(params[:id])
+      respond_to do |f|
+        f.html { render :show }
+        f.json { render json: @post.to_json(only: [:title, :description, :id],
+          include: [author: {only: [:name]}]) }
+        end
+      end
+
+/posts/:id.html will return HTML format of request
+/posts/:id.json will return serialized object in JSON form
