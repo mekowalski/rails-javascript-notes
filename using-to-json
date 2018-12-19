@@ -1,0 +1,3 @@
+-In previous lesson, Serializer worked will BUT with String concatenation and keeping track of all the single
+ and double quotes is a nightmare
+-Imagine writing more serializers for more than 4 fields
