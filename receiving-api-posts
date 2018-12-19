@@ -34,3 +34,16 @@ CREATING AN OBJECT WITH AJAX POST
        })
      })
    </script>
+
+
+GETTING RESPONSE FROM AJAX POST
+-With AJAX request, Data is expected to be returned to deal with on the client side
+-When controller redirected and rendered show page, it actually sent Data to .done() method
+eg: console.log(data) => returns hfull HTML of show page for new object
+
+Side-note About HTTP Codes
+-HTTP status codes exist to let client know response received and what to do about it
+-redirect_to status code: 302, knows it needs to follow the 'redirect' to given link and load that link next
+-302 considered temporary or found
+-AJAX requests don't follow redirects because they CANNOT
+-AJAX chooses NOT to follow link and instead takes whatever rendered DATA is
