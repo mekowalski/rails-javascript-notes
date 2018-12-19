@@ -57,3 +57,24 @@ eg: post_serializer.rb
         serialized_post += '}'
       end
     end
+
+-Take care of quotations, single-quote strings because JSON requires double-quoted keys and string values
+
+-update #body in posts_controller.rb to use serializer
+eg: posts_controller.rb
+    def body
+      post = Post.find(params[:id])
+      render json: PostSerializer.serialize(post)
+    end
+
+-Changes to render json: still rendering string but need to communicate that it's properly formatted JSON
+-JSONView in chrome helps immensely with reading JSON and validates it, giving errors if there are issues
+eg: /posts/4/body
+    {
+      id: 4,
+      title: "A Blog Post By Stephen King",
+      description: "This is a blog post by Stephen King. It will probably be a movie soon.",
+      author: {
+        name: "Stephen King"
+      }
+    }
