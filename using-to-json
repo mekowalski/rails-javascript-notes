@@ -22,3 +22,17 @@ eg: posts_controller.rb
       post = Post.find(params[:id])
       render json: post.to_json(include: :author)
     end
+
+
+ONLY RENDER NEEDED DATA
+-Raw JSON provides data of object including EVERYTHING
+-It's not all neccessary, a good API endpoint should return only the data needed and nothing more
+-to_json gives ways to exclude data with 'only' option
+eg: posts_controller.rb
+    def post_data
+      post = Post.find(params[:id])
+      render json: post.to_json(only: [:title, description, :id],
+        include: [author: {only: [:name]}])
+    end
+
+-Can use 'only' on main object and included objects
