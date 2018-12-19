@@ -1,3 +1,21 @@
 CREATING AN OBJECT WITH AJAX POST
 -With a form already built, the form will be used BUT alongside jQuery and AJAX to submit the form
 -This will handle a JSON response and display the newly created object without redirecting the show page
+1. Prevent default form submit action and customize the action with and event handler
+   eg: objects/new.html.erb
+   <%= for_for(@object) do |f| %>
+     //code for :title
+     //code for :description
+     <div class='actions'>
+      <%= f.submit %>
+     </div>
+   <% end %>
+
+   <script type='text/javascript' charset='utf-8'>
+     $(function() {
+       $('form').submit(function(e) {
+         e.preventDefault()
+         alert('we r hack3rz')
+       })
+     })
+   </script>
