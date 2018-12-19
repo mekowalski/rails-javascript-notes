@@ -1,0 +1,3 @@
+CREATING AN OBJECT WITH AJAX POST
+-With a form already built, the form will be used BUT alongside jQuery and AJAX to submit the form
+-This will handle a JSON response and display the newly created object without redirecting the show page
