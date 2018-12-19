@@ -19,3 +19,17 @@ eg:
 -XML is the lingua franca of system communication
 -Problem with XML is parsing which is a tedious job
 -XML also has potential to inflate size of result dramatically
+
+
+JSON
+-JSON: JavaScript Object Notation: JS to consume data from API and serialize that data for consumption
+-Serializing the same object is much more readable and represents data well
+eg:
+  {
+    'id': 1,
+    'title': 'This is a blog post',
+    'description': 'Description of the blog post inside this tag'
+  }
+
+-JSON structure similar to a dictionary with sets of KEY-VALUE pairs
+-Simpler to access values via 'dictionary' than traversing the nodes of tag-based doc
