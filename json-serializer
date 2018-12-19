@@ -78,3 +78,9 @@ eg: /posts/4/body
         name: "Stephen King"
       }
     }
+
+
+CONSUMING JSON FROM API
+-Making use of JSON response that comes back after an API request has been made
+-Access they keys and values in the app directly inside the function that receives the response
+eg: inside function in posts/index.html.erb
