@@ -33,3 +33,27 @@ eg:
 
 -JSON structure similar to a dictionary with sets of KEY-VALUE pairs
 -Simpler to access values via 'dictionary' than traversing the nodes of tag-based doc
+
+
+OUR OWN JSON SERIALIZER
+-Need to return JSON from controller but controller is NOT responsible for serializing objects
+-Begin with new class
+eg: create post_serializer.rb in app/serializers DIR
+    follow in 'diy-json-serializer-ruby-v-000'
+
+-Rails will automatically load any code found in any folders under app/
+-Inside post_serializer.rb, need to serialize a Post object(into a JSON string)
+eg: post_serializer.rb
+    class PostSerializer
+      def self.serialize(post)
+        # start with the open brace to create a valid JSON object
+        serialized_post = '{'
+
+        serialized_post += '"id": ' + post.id.to_s + ', '
+        serialized_post += '"title": "' + post.title + '", '
+        serialized_post += '"description": "' + post.description + '", '
+
+        # and end with the close brace
+        serialized_post += '}'
+      end
+    end
