@@ -12,3 +12,13 @@ eg: posts_controller.rb
     end
 
 -Updates post body without changing a thing
+
+
+INCLUDING ASSOCIATIONS
+-to_json only updates the main object NOT any associations
+-To change this, tell to_json to 'include' associated objects
+eg: posts_controller.rb
+    def post_data
+      post = Post.find(params[:id])
+      render json: post.to_json(include: :author)
+    end
