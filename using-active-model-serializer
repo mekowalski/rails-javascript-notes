@@ -1,3 +1,8 @@
 -to_json output may return deeply nested data
 -Keeping track of nested data in a to_json call may be frustrating and near impossible to maintain
+
+
+ACTIVEMODEL::SERIALIZER
+-ActiveModel::Serializer(AMS): provdes convention-based approach to serializing resources in a Rails way
+-By default Rails will use serializer if simply calling 'render json: @object' in controller
 -
