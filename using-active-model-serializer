@@ -70,3 +70,21 @@ eg: AssociateSerializer
       attributes :id, :name
       has_many :objects
     end
+
+
+RENDERING WITH EXPLICIT SERIALIZERS
+-To display an Object's Associate, don't need info being rendered from AssociateSerializer
+-If a simple retrieval is needed then a simpler serialization can be made
+eg: make new ObjectAssociateSerializer
+1. rails g serializer object_associate
+2. Add bare minimum of what's needed for Associate to be embedded in an Object
+   eg:
+   class ObjectAssociateSerializer < ActiveModel::Serializer
+     attributes :name
+   end
+3. Explicitly give a serializer to use rather than rely on convention
+   eg:
+   class ObjectSerializer < ActiveModel::Serializer
+     attributes :id, :title, :description
+     belongs_to :associate, serializer: ObjectAssociateSerializer
+   end
