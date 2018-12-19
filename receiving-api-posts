@@ -14,8 +14,23 @@ CREATING AN OBJECT WITH AJAX POST
    <script type='text/javascript' charset='utf-8'>
      $(function() {
        $('form').submit(function(e) {
-         e.preventDefault()
+         e.preventDefault() //prevent form from submitting the default way and sends alert instead
          alert('we r hack3rz')
+       })
+     })
+   </script>
+
+2. Retrieve the form values and POST them to /objects, which is the route for creating a new Object
+   eg: objects/new.html.erb
+   <script type='text/javascript' charset='utf-8'>
+     $(function() {
+       $('form').submit(function(e) {
+         e.preventDefault() //prevent form from submitting the default way and sends alert instead
+         var values = $(this).serialize() //talkes form data and serializes
+         var objecting = $.post('/objects', values) //jQuery post() to pass in URL and values
+         posting.done(function(data) { //specifiy what should happen when AJAX request is done
+           //TODO: Handle response
+         })
        })
      })
    </script>
